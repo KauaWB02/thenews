@@ -68,7 +68,7 @@ Guarde esses dados, pois os utilizaremos em breve! 🎯
 
 ### 4️⃣ Configurar o `wrangler.json`
 
-Abra o arquivo **`wrangler.exemplo.json`**(Remova o .exemplo do arquivo) e configure as credenciais obtidas na etapa anterior. Ele deve ficar parecido com:
+Abra o arquivo **`wrangler.json`** e configure as credenciais obtidas na etapa anterior. Ele deve ficar parecido com:
 
 ```json
 {
@@ -94,7 +94,7 @@ wrangler d1 execute {nome-do-banco} --env dev --file schema.sql
 
 Isso criará todas as tabelas necessárias para o funcionamento da aplicação. 🔥
 
-### 6️⃣ Resetar o Banco (Opcional)ç
+### 6️⃣ Resetar o Banco (Opcional)
 
 Se precisar resetar o banco de dados e apagar todas as tabelas, execute:
 
@@ -131,9 +131,29 @@ wrangler d1 execute the-news-production --env production --remote --file dump.sq
 wrangler d1 execute the-news-dev --env dev --command "SELECT * FROM newsLetter_openings WHERE user_id = ? ORDER BY id DESC;"
 ```
 
+### 📌 Rodar Testes Unitários
+
+Para executar os testes unitários do projeto, utilize um dos seguintes comandos:
+
+```sh
+npm run test
+```
+
+ou
+
+```sh
+npm test
+```
+
+Isso garantirá que todas as funcionalidades da aplicação estejam funcionando corretamente antes do deploy. ✅
+
 ---
 
 ## 🎯 Conclusão
 
-Agora você tem tudo pronto para rodar o projeto com **Cloudflare Work + D1**! 🚀
+Agora você tem tudo pronto para rodar seu projeto com **Cloudflare Work + D1**! 🚀
+
+Caso tenha alguma dúvida ou queira expandir mais o projeto, sinta-se à vontade para explorar as documentações do **Cloudflare** e testar novas implementações.
+
+Bons códigos! 💻🔥
 
