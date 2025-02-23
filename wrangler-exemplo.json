@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "the-news",
+  "main": "src/server.ts",
+  "compatibility_date": "2025-02-15",
+  "env": {
+    "dev": {
+      "observability": {
+        "enabled": true,
+        "head_sampling_rate": 1
+      },
+      "vars": {
+        "JWT_SECRET": "the_news-dev",
+        "ENVIRONMENT": "development"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "the-news-dev",
+          "database_id": "41779272-bc6f-41d2-bae5-9ae3ed404b44"
+        }
+      ]
+    }
+  }
+}
